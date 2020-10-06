@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pokemon"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/txt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="3dp"
+        android:text="Create your Account"
+        android:textColor="#fff"
+        android:textSize="19sp"
+        android:layout_below="@id/img"/>
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="35dp"
+        android:hint="EMAIL"
+        android:layout_below="@id/txt_login"/>
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="3dp"
+        android:hint="Password"
+        android:password="true"
+        android:layout_below="@id/edit1"/>
+
+    <EditText
+        android:id="@+id/edit3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="3dp"
+        android:hint="Confirm Password"
+        android:password="true"
+        android:layout_below="@id/edit2"/>
+
+    <Button
+        android:id="@+id/bt_sign"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#315AA1"
+        android:textColor="#fff"
+        android:layout_below="@id/edit3"
+        android:text="Sign up"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- Or sign up whit -"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:layout_below="@id/bt_sign"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo_google"
+        android:layout_toLeftOf="@id/facebook"
+        android:layout_below="@id/txt_other"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/facebook"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:src="@drawable/logo_facebook"
+        android:layout_below="@id/txt_other"
+        android:layout_centerHorizontal="true"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo_twitter"
+        android:layout_toRightOf="@id/facebook"
+        android:layout_below="@id/txt_other"/>
+
+</RelativeLayout>

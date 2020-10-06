@@ -8,6 +8,9 @@ public class Pokemon {
     public String supertype;
     public String set;
 
+    public Pokemon(){
+
+    }
 
     public Pokemon(String id, String name, String imageUrl, String supertype, String set) {
         this.id = id;
