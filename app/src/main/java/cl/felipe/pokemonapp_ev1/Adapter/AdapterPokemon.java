@@ -1,6 +1,7 @@
 package cl.felipe.pokemonapp_ev1.Adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -15,6 +17,7 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import cl.felipe.pokemonapp_ev1.R;
+import cl.felipe.pokemonapp_ev1.Details;
 import cl.felipe.pokemonapp_ev1.modelo.Pokemon;
 
 public class AdapterPokemon extends RecyclerView.Adapter<AdapterPokemon.PokemonHolder>{
@@ -44,7 +47,7 @@ public class AdapterPokemon extends RecyclerView.Adapter<AdapterPokemon.PokemonH
         holder.item_supertype.setText(pokemon.supertype);
         holder.item_set.setText(pokemon.set);
         Glide.with(activity).load(pokemon.imageUrl).into(holder.item_image);
-
+        holder.urlImage = pokemon.imageUrl;
     }
 
     @Override
@@ -56,6 +59,9 @@ public class AdapterPokemon extends RecyclerView.Adapter<AdapterPokemon.PokemonH
 
         ImageView item_image;
         TextView item_id, item_name, item_supertype, item_set;
+        CardView item_card;
+
+        String urlImage;
 
         public PokemonHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,6 +70,16 @@ public class AdapterPokemon extends RecyclerView.Adapter<AdapterPokemon.PokemonH
             item_name = itemView.findViewById(R.id.item_name);
             item_supertype = itemView.findViewById(R.id.item_supertype);
             item_set = itemView.findViewById(R.id.item_set);
+            item_card = itemView.findViewById(R.id.item_card);
+
+            item_card.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(activity, Details.class);
+                    intent.putExtra("PICTURE", urlImage);
+                    activity.startActivity(intent);
+                }
+            });
         }
     }
 

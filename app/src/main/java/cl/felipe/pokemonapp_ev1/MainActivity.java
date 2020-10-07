@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String id = pokemon1.getString("id");
                 String name = pokemon1.getString("name");
-                String imageUrl = pokemon1.getString("imageUrl");
+                String imageUrl = pokemon1.getString("imageUrlHiRes");
                 String supertype = pokemon1.getString("supertype");
                 String set = pokemon1.getString("set");
 
