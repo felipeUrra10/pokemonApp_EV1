@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/fondo"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:paddingTop="10dp"
-    tools:context=".Login">
+    tools:context=".Login"
+    android:orientation="vertical">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img"
+        android:layout_gravity="center"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:scaleType="centerCrop"
+        android:layout_marginTop="30dp"
         android:src="@drawable/pokemon"
-        android:layout_centerHorizontal="true"
         />
 
     <TextView
         android:id="@+id/txt_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="35dp"
         android:text="Login to your Account"
         android:textColor="#fff"
         android:textSize="19sp"
@@ -31,20 +33,23 @@
     <EditText
         android:id="@+id/edit1"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginHorizontal="35dp"
+        android:background="#88FFFFFF"
         android:textColor="#fff"
-        android:hint="EMAIL"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:layout_marginTop="30dp"
         android:layout_below="@id/txt_login"/>
 
     <EditText
         android:id="@+id/edit2"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
+        android:background="#88FFFFFF"
         android:layout_marginHorizontal="35dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="10dp"
         android:textColor="#fff"
-
         android:hint="Password"
         android:password="true"
         android:layout_below="@id/edit1"/>
@@ -58,7 +63,7 @@
         android:layout_below="@id/edit2"
         android:text="Sign in"
         android:layout_marginHorizontal="35dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:onClick="confirm"
         />
 
@@ -71,37 +76,46 @@
         android:textSize="15sp"
         android:layout_below="@id/bt_sign"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="45dp"
+        android:layout_gravity="center"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logo_google"
+
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/facebook"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logo_facebook"
+        android:layout_marginHorizontal="40dp"
         />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/logo_google"
-        android:layout_toLeftOf="@id/facebook"
-        android:layout_below="@id/txt_other"/>
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/facebook"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginHorizontal="20dp"
-        android:src="@drawable/logo_facebook"
-        android:layout_below="@id/txt_other"
-        android:layout_centerHorizontal="true"/>
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
         android:src="@drawable/logo_twitter"
-        android:layout_toRightOf="@id/facebook"
-        android:layout_below="@id/txt_other"/>
+        />
 
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="10dp">
     <TextView
         android:id="@+id/txtreg"
         android:layout_width="wrap_content"
@@ -109,9 +123,6 @@
         android:text="Don't have an account?"
         android:textColor="#fff"
         android:textSize="15sp"
-        android:layout_below="@id/facebook"
-        android:layout_marginLeft="80dp"
-        android:paddingBottom="30dp"
         />
 
     <TextView
@@ -120,21 +131,19 @@
         android:text="Sign Up"
         android:textColor="#024CE3"
         android:textSize="15sp"
-        android:layout_marginLeft="8dp"
-        android:layout_below="@id/facebook"
-        android:paddingBottom="30dp"
-        android:layout_toRightOf="@id/txtreg"
         android:onClick="signUp"
+        android:layout_marginLeft="3dp"
         />
+    </LinearLayout>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginHorizontal="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:background="#315AA1"
         android:text="Acerca de"
         android:textColor="#fff"
-        android:layout_below="@id/txtreg"
-        android:onClick="creation"/>
+        android:onClick="creation"
+        android:layout_marginTop="10dp"/>
 
-</RelativeLayout>
+</LinearLayout>
