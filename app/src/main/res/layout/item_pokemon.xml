@@ -14,7 +14,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#858CC1">
+        android:background="@drawable/dise"
+        >
 
     <ImageView
         android:id="@+id/item_image"
@@ -29,6 +30,7 @@
         <LinearLayout
             android:layout_marginLeft="15dp"
             android:layout_marginTop="8dp"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"

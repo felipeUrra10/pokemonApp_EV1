@@ -32,7 +32,8 @@
         android:layout_height="50dp"
         android:layout_marginHorizontal="35dp"
         android:hint="EMAIL"
-        android:layout_below="@id/txt_login"/>
+        android:layout_below="@id/txt_login"
+        android:background="@drawable/editxt"/>
     <EditText
         android:id="@+id/edit2"
         android:layout_width="match_parent"
@@ -40,6 +41,7 @@
         android:layout_marginHorizontal="35dp"
         android:layout_marginTop="3dp"
         android:hint="Password"
+        android:background="@drawable/editxt"
         android:password="true"
         android:layout_below="@id/edit1"/>
 
@@ -50,6 +52,7 @@
         android:layout_marginHorizontal="35dp"
         android:layout_marginTop="3dp"
         android:hint="Confirm Password"
+        android:background="@drawable/editxt"
         android:password="true"
         android:layout_below="@id/edit2"/>
 
@@ -57,12 +60,12 @@
         android:id="@+id/bt_sign"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:background="#315AA1"
         android:textColor="#fff"
         android:layout_below="@id/edit3"
         android:text="Sign up"
         android:layout_marginHorizontal="35dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/boton"
         />
 
     <TextView
